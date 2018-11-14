@@ -2,13 +2,13 @@ Open Postgresql Monitoring (OPM)
 ================================
 
 
-####Application Instruction
+#### Application Instruction
 
 - Version
 
 Application | Version | Maintainer 
------------ |:-------:|:----------:
-    OPM     | 2.2.3   |  Hyman     
+:-----------:|:-------:|:----------:
+OPM | 2.2.3   |  Hyman     
 
 
 - Default Accounts
@@ -21,7 +21,7 @@ Nagios | nagiosadmin | nagios
 
 > *THe file `.pgpass` is used for access to the remote postgresql server. If the remote server have been set  md5,  the account should be here.*
 
-####Instruciton
+#### Instruciton
 
 OPM (Open postgresql mornitoring) is used for monitoring the running postgresql server, it runs based on nagios and postgresql, before deploying OPM, you should have some knowledge about nagios and postgresql.
 
@@ -31,7 +31,7 @@ The plugin of `check_pgactivity` is the most important part of OPM, if offers no
 custom querys to for special usage. Click [here](https://github.com/OPMDG/check_pgactivity) to get more information of  check_pgactivty.
 The file `/usr/local/nagios/etc/objects/commands.cfg` has defined the command `check_pgactivity` as `check_pgactivity -h $ARG1$  -s $ARG2$  -w $ARG3$ -c $ARG4$ `.
 
-####Usage
+#### Usage
 
 - Get the repository:
 
@@ -64,7 +64,7 @@ Visit `http://ip_address:nagios_port/nagios` to access nagios UI by default acco
 
 Visit `http://ip_address:opm_port` to access OPM UI by default account.
 
-####Note
+#### Note
 
 While the db_server have changed  access configurations,  OPM may have no permission to access the db_server, the file `.pgpass` need to be created  using `nagios` account in the container.
 
